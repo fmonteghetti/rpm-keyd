@@ -7,6 +7,8 @@ License:        MIT
 URL:            https://github.com/rvaiya/%{name}
 Source0:        https://github.com/rvaiya/%{name}/archive/refs/tags/v2.3.1-rc.tar.gz
 
+Patch0:        Makefile-fPIE.patch
+
 BuildRequires:  gcc
 BuildRequires:  make
 BuildRequires:  systemd
@@ -25,6 +27,8 @@ Note: this package only provides the keyd daemon.
 
 %prep
 %setup -q -n %{name}-2.3.1-rc
+# Patch Makefile to use -fPIE
+%patch0
 
 %build
 # Compile with debug symbols to generate debug packages
