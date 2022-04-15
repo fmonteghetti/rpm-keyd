@@ -1,2 +1,3 @@
-# rpm-keyd
-Spec file to build a rpm package for the keyd daemon (https://github.com/rvaiya/keyd).
+# rpm-spec
+Spec files to build rpm packages.
+- keyd (https://github.com/rvaiya/keyd)
